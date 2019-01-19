@@ -20,6 +20,10 @@ exports.run = async (bot, msg, args) => {
   msg.delete();
 
   if (bot.warns.get(`${warnedUser.id}`, "warnings") == 1) {
+    msg.channel.send(
+      `${warnedUser}, premier avertissement (raison: ${reason}).`
+    );
+
     const warnEmbed = new Discord.RichEmbed()
       .setThumbnail(
         "https://getcodingknowledge.com/wp-content/uploads/2018/12/averti1.png"
@@ -42,7 +46,9 @@ exports.run = async (bot, msg, args) => {
     await warnedUser
       .removeRole(acRole.id)
       .then(warnedUser.addRole(muteRole.id));
-    msg.channel.send(`${warnedUser} est muté pendant ${muteTime}.`);
+    msg.channel.send(
+      `${warnedUser} est muté pendant ${muteTime} (raison: ${reason}).`
+    );
 
     setTimeout(function() {
       warnedUser.removeRole(muteRole.id).then(warnedUser.addRole(acRole.id));
@@ -72,7 +78,9 @@ exports.run = async (bot, msg, args) => {
     await warnedUser
       .removeRole(acRole.id)
       .then(warnedUser.addRole(muteRole.id));
-    msg.channel.send(`${warnedUser} est muté pendant ${muteTime}.`);
+    msg.channel.send(
+      `${warnedUser} est muté pendant ${muteTime} (raison: ${reason}).`
+    );
 
     setTimeout(function() {
       warnedUser.removeRole(muteRole.id).then(warnedUser.addRole(acRole.id));
