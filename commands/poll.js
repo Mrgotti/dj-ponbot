@@ -4,9 +4,9 @@ exports.run = async (bot, msg) => {
   const pollEmbed = new Discord.RichEmbed()
     .setTitle("Sujet pour la prochaine vidéo Discord")
     .setColor("#dc143c")
-    .setFooter("Appuyez sur les réactions ci-dessous.")
+    .setFooter("Appuyez sur une des réactions ci-dessous.")
     .setDescription(
-      ":one: Lecture de la documentation. \n :two: Comment stocker des données avec Enmap. \n :three: Comment utiliser les collecteurs."
+      ":one: Lecture de la documentation. \n :two: Comment stocker des données avec Enmap."
     );
 
   msg.channel.send(pollEmbed);
