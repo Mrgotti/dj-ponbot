@@ -1,5 +1,10 @@
 exports.run = async (bot, msg) => {
   const warnedUser = msg.guild.member(msg.author);
+
+  bot.warns.ensure(`${warnedUser.id}`, {
+    warnings: 0
+  });
+
   const userWarnings = bot.warns.get(`${warnedUser.id}`, "warnings");
 
   msg.channel.send(
@@ -16,6 +21,6 @@ exports.conf = {
 
 exports.help = {
   name: "mywarn",
-  description: "Connaître le nombre d'avertissement qu'un utilisateur possède.",
+  description: "Connaître le nombre d'avertissement que tu possèdes.",
   usage: "mywarn"
 };
