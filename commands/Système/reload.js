@@ -5,7 +5,7 @@ class Reload extends Command {
     super(client, {
       name: "reload",
       description: "Reloads a command that has been modified.",
-      category: "System",
+      category: "Système",
       usage: "reload [command]",
       permLevel: "Alex"
     });

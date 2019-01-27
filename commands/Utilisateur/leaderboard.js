@@ -20,7 +20,6 @@ class Leaderboard extends Command {
       const top10 = sorted.splice(0, 10);
 
       const embed = new Discord.RichEmbed()
-        .setTitle("Le top 10 du serveur !")
         .setThumbnail(
           "https://getcodingknowledge.com/wp-content/uploads/2019/01/level.png"
         )
@@ -32,7 +31,7 @@ class Leaderboard extends Command {
         );
       }
       message.delete();
-      return message.channel.send({ embed }).then(msg => msg.delete(10000));
+      return message.channel.send({ embed }).then(msg => msg.delete(30000));
     } catch (e) {
       console.log(e);
     }
