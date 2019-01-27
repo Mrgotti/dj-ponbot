@@ -7,7 +7,7 @@ class Stats extends Command {
   constructor(client) {
     super(client, {
       name: "stats",
-      description: "Gives some useful bot statistics.",
+      description: "Informations utiles sur le bot.",
       usage: "stats"
     });
   }
@@ -19,15 +19,14 @@ class Stats extends Command {
       .format(" D [days], H [hrs], m [mins], s [secs]");
     message.channel.send(
       `= STATISTICS =
-  • Mem Usage  :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(
+  • Mémoire      :: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(
     2
   )} MB
-  • Uptime     :: ${duration}
-  • Users      :: ${this.client.users.size.toLocaleString()}
-  • Servers    :: ${this.client.guilds.size.toLocaleString()}
-  • Channels   :: ${this.client.channels.size.toLocaleString()}
-  • Discord.js :: v${version}
-  • Node       :: ${process.version}`,
+  • Uptime       :: ${duration}
+  • Utilisateurs :: ${this.client.users.size.toLocaleString()}
+  • Salons       :: ${this.client.channels.size.toLocaleString()}
+  • Discord.js   :: v${version}
+  • Node         :: ${process.version}`,
       { code: "asciidoc" }
     );
   }

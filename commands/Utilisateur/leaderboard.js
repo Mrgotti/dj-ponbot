@@ -21,7 +21,10 @@ class Leaderboard extends Command {
 
       const embed = new Discord.RichEmbed()
         .setTitle("Le top 10 du serveur !")
-        .setColor(0x00ae86);
+        .setThumbnail(
+          "https://getcodingknowledge.com/wp-content/uploads/2019/01/level.png"
+        )
+        .setColor("#ff4ff6");
       for (const data of top10) {
         embed.addField(
           this.client.users.get(data.user).tag,
