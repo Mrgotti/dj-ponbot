@@ -7,7 +7,7 @@ class Cleanupdb extends Command {
       description:
         "Nettoyer la base de données des utilisateurs n'ayant pas parlé depuis 1 mois (ou ceux qui ont quitté).",
       usage: "cleanupdb",
-      category: "Système",
+      category: "Expérience",
       permLevel: "Alex"
     });
   }

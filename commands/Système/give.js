@@ -6,7 +6,7 @@ class Give extends Command {
       name: "give",
       description: "Donner des points d'expérience à un utilisateur.",
       usage: "give",
-      category: "Système",
+      category: "Expérience",
       permLevel: "Alex"
     });
   }

@@ -26,7 +26,7 @@ module.exports = class {
 
       if (this.client.points.get(key, "level") < curLevel) {
         message.reply(
-          `Tu es monté au niveau **${curLevel}**! Dj-pon te félicite !`
+          `tu es maintenant niveau **${curLevel}**! Dj-pon te félicite !`
         );
         this.client.points.set(key, curLevel, "level");
       }

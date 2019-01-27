@@ -13,7 +13,7 @@ class Reboot extends Command {
 
   async run(message) {
     try {
-      await message.reply("Bot is shutting down.");
+      await message.reply("le bot est en train de se relancer.");
       this.client.commands.forEach(async cmd => {
         await this.client.unloadCommand(cmd);
       });

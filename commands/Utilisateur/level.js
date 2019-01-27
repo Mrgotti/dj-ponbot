@@ -6,6 +6,7 @@ class Level extends Command {
       name: "level",
       description:
         "Renvoie le niveau et les points d'expérience de l'utilisateur.",
+      category: "Expérience",
       usage: "level"
     });
   }

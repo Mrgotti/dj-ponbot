@@ -7,6 +7,7 @@ class Leaderboard extends Command {
       name: "leaderboard",
       description: "Renvoie le classement du serveur (top 10).",
       usage: "leaderboard",
+      category: "Expérience",
       aliases: ["lead"]
     });
   }
@@ -27,7 +28,7 @@ class Leaderboard extends Command {
       for (const data of top10) {
         embed.addField(
           this.client.users.get(data.user).tag,
-          `${data.points} points (level ${data.level})`
+          `${data.points} points (niveau ${data.level})`
         );
       }
       message.delete();
