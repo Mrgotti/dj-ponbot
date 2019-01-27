@@ -1,0 +1,27 @@
+const Command = require("../../modules/Command.js");
+
+class Ping extends Command {
+  constructor(client) {
+    super(client, {
+      name: "ping",
+      description: "Latency and API response times.",
+      usage: "ping",
+      aliases: ["pong"]
+    });
+  }
+
+  async run(message) {
+    // eslint-disable-line no-unused-vars
+    try {
+      const msg = await message.channel.send("🏓 Ping!");
+      msg.edit(
+        `🏓 Pong! (Roundtrip took: ${msg.createdTimestamp -
+          message.createdTimestamp}ms. 💙: ${Math.round(this.client.ping)}ms.)`
+      );
+    } catch (e) {
+      console.log(e);
+    }
+  }
+}
+
+module.exports = Ping;

@@ -16,7 +16,6 @@
         "SwitchCase": 1
       }
     ],
-    "linebreak-style": ["error", "windows"],
     "quotes": ["warn", "double"],
     "semi": ["warn", "always"],
     "keyword-spacing": [
